@@ -1,15 +1,60 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
+import { getCurrencies, getModels, getPayment } from "./api/apis";
+import { Auth } from "./components/Auth";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import { Invest } from "./screens/Invest/Invest";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
+const router = createBrowserRouter([
+  {
+    path: "/login",
+    element: (
+      <Auth isLogin>
+        <Navigate to="/invest" />
+      </Auth>
+    ),
+  },
+  {
+    path: "/invest",
+    element: (
+      <Auth>
+        <Invest />
+      </Auth>
+    ),
+    loader: async () => {
+      const currencies = await getCurrencies();
+      const models = await getModels();
+      const payment = await getPayment();
+      return {
+        currencies: (await currencies.json()).data,
+        models: (await models.json()).data,
+        payment: (await payment.json()).data,
+      };
+    },
+  },
+  {
+    path: "/",
+    element: (
+      <Auth>
+        <Navigate to="/invest" />
+      </Auth>
+    ),
+  },
+]);
+
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

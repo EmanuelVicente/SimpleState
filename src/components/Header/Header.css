@@ -1,0 +1,13 @@
+.header-container {
+  height: 82px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding-left: 132px;
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    padding-left: 24px;
+  }
+}

@@ -1,0 +1,1 @@
+export { ModalRegisteredInvest } from "./ModalRegisteredInvest";

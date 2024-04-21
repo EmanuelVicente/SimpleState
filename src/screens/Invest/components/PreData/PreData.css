@@ -1,0 +1,53 @@
+.predata-input {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin: 0px 48px;
+}
+
+.predata-line1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.predata-line2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.predata-line3 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.predata-content {
+  margin: 32px 48px 48px 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+}
+
+@media (max-width: 600px) {
+  .predata-line1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .predata-line2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .predata-line3 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .predata-content {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 28px 24px 24px 24px;
+    gap: 48px 0px;
+  }
+}

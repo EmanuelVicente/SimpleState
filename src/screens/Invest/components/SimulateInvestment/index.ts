@@ -1,0 +1,1 @@
+export { SimulateInvestment } from "./SimulateInvestment";

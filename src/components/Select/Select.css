@@ -1,0 +1,58 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-label {
+  font-weight: 400;
+  size: 14px;
+  margin-bottom: 8px;
+}
+
+.select-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select-component {
+  display: flex;
+  border: 1px solid var(--gray-color-one);
+  height: 40px;
+  border-radius: 5px;
+  border-width: 1px;
+  padding: 8px;
+  font-family: "Montserrat";
+}
+
+.select-component:focus,
+.select-component:hover,
+.select-component:focus-visible {
+  border-color: var(--primary-color);
+  outline: none !important;
+}
+
+.select-option-container {
+  position: absolute;
+  width: 100%;
+  padding: 10px 0px;
+  background-color: white;
+  box-shadow: 0px 0px 4px 0px #48484840;
+}
+
+.select-icon {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.select-extra-text {
+  position: absolute;
+  font-style: italic;
+  text-decoration: underline;
+  bottom: -28px;
+  cursor: pointer;
+}

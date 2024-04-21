@@ -1,13 +1,96 @@
+:root {
+  --primary-color: #3bd4ae;
+  --gray-color-one: #585858;
+  --gray-color-two: #979797;
+  --gray-color-three: #cccccc;
+  --black-one: #1f1646;
+  --background-color: #f0f0f0;
+  font-family: "Montserrat";
+}
+
+#root {
+  min-height: 100dvh;
+  width: 100vw;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: auto;
+}
+
+.button-primary {
+  background-color: var(--gray-color-two);
+  width: 214px;
+  height: 49px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-one);
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+}
+
+.button-primary-validated {
+  background-color: var(--primary-color);
+}
+
+.button-secondary {
+  background-color: transparent;
+  width: 214px;
+  height: 49px;
+  border-width: 1px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-one);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.button-secondary:hover {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.24);
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 4px;
+  accent-color: var(--primary-color);
+  font-size: 8px;
+  align-self: center;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .button-primary,
+  .button-secondary {
+    width: 142px;
+    height: 32px;
+    font-size: 12px;
+  }
 }

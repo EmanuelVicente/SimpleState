@@ -1,0 +1,110 @@
+.payment-method-content:first-child {
+  margin-top: 52px;
+}
+
+.payment-method-content:nth-child(2) {
+  margin-top: 68px;
+}
+
+.payment-method-content:nth-child(3) {
+  margin-top: 32px;
+}
+
+.payment-method-content:nth-child(3) > span > span {
+  font-weight: 600;
+}
+
+.payment-method-method-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.payment-method-subtitle {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.payment-method-amount-to-pay {
+  background-color: #e2e2fe;
+  padding: 12px 12px;
+  border-radius: 10px;
+}
+.payment-method-amount-to-pay > span {
+  font-weight: 600;
+}
+
+.payment-method-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 70px;
+  margin-right: 48px;
+  margin-left: 48px;
+}
+
+.payment-method-drop-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  margin-right: 48px;
+  margin-left: 48px;
+  margin-top: 56px;
+  margin-bottom: 36px;
+}
+
+.payment-method-drop {
+  width: 100%;
+  height: 112px;
+  border-color: var(--gray-color-three);
+  border-style: dashed;
+  border-width: 1px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.payment-method-drop-input {
+  display: none;
+}
+
+.payment-method-drop-label {
+  cursor: pointer;
+}
+
+.payment-method-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.payment-method-tag-container > div {
+  background-color: var(--primary-color);
+  font-size: 10px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.payment-method-tag-cross {
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .payment-method-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px 0px;
+  }
+  .payment-method-subtitle-hidden {
+    display: none;
+  }
+  .payment-method-content:nth-child(3) {
+    margin-top: 0px;
+  }
+}

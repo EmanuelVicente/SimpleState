@@ -1,0 +1,65 @@
+.invest-container {
+  width: 100%;
+  background-color: var(--background-color);
+  padding-bottom: 48px;
+}
+
+.invest-content {
+  max-width: 930px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+}
+
+.invest-card {
+  background-color: white;
+  width: 100%;
+  box-shadow: 0px 0px 10px 0px #bdbdbd40;
+  border-radius: 10px;
+}
+
+.invest-go-back-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  height: 20px;
+  margin-top: 48px;
+  cursor: pointer;
+}
+
+.invest-title {
+  font-weight: 600;
+  font-size: 21px;
+  margin-top: 48px;
+  margin-bottom: 36px;
+}
+
+.invest-simulate-investment {
+  margin-top: 24px;
+}
+
+.invest-button {
+  align-self: flex-end;
+  margin-top: 28px;
+}
+
+.invest-checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+.invest-checkbox-container > span {
+  font-style: italic;
+}
+.invest-checkbox-container > span > span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .invest-button {
+    align-self: flex-start;
+  }
+}

@@ -1,0 +1,58 @@
+.simple-state-logo {
+  width: 250px;
+  height: 31px;
+}
+
+.login-container {
+  width: 390px;
+  margin: 0px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.login-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  size: 20px;
+  line-height: 26px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.login-email-input {
+  margin-bottom: 32px;
+}
+
+.login-password-input {
+  margin-bottom: 24px;
+}
+
+.login-forget-password {
+  font-weight: 600;
+  size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-already-register {
+  font-weight: 400;
+  size: 12px;
+}
+
+.login-button {
+  align-self: center;
+  margin-top: 100px;
+}
+
+.login-already-register > span {
+  font-weight: 700;
+  size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+}
