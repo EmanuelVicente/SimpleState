@@ -92,7 +92,7 @@ export const Invest = () => {
               <>
                 <PreData
                   amount={form.amount}
-                  currency={form.amount}
+                  currency={form.currency}
                   model={form.model}
                   onChangeValue={setForm}
                 />

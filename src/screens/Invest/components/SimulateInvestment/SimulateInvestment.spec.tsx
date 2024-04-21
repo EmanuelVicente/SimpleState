@@ -11,32 +11,18 @@ describe("SimulateInvestment", () => {
     expect(screen.getByTestId("empty-simulate")).toBeInTheDocument();
   });
   it("should show data", async () => {
-    render(<SimulateInvestment data={simulateInvestmentDataMock} />);
+    const { data } = simulateInvestmentDataMock;
+    render(<SimulateInvestment data={data} />);
+    expect(screen.getByText(`USD ${data.amount}`)).toBeInTheDocument();
     expect(
-      screen.getByText(`USD ${simulateInvestmentDataMock.amount}`)
+      screen.getByText(`USD ${data.profitability_amount}`)
     ).toBeInTheDocument();
+    expect(screen.getByText(`${data.profitability}%`)).toBeInTheDocument();
+    expect(screen.getByText(`${data.mont_term} meses`)).toBeInTheDocument();
+    expect(screen.getByText(data.parking)).toBeInTheDocument();
     expect(
-      screen.getByText(`USD ${simulateInvestmentDataMock.profitability_amount}`)
+      screen.getByText(`USD ${data.amount + data.profitability_amount}`)
     ).toBeInTheDocument();
-    expect(
-      screen.getByText(`${simulateInvestmentDataMock.profitability}%`)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(`${simulateInvestmentDataMock.mont_term} meses`)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(simulateInvestmentDataMock.parking)
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(
-        `USD ${
-          simulateInvestmentDataMock.amount +
-          simulateInvestmentDataMock.profitability_amount
-        }`
-      )
-    ).toBeInTheDocument();
-    expect(
-      screen.getByText(simulateInvestmentDataMock.payment)
-    ).toBeInTheDocument();
+    expect(screen.getByText(data.payment)).toBeInTheDocument();
   });
 });
